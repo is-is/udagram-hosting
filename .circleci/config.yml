@@ -27,22 +27,22 @@ jobs:
       # TODO: Install dependencies in the the backend API          
       - run:
           name: Install API Dependencies
-          command: |
+          command: npm run api:install|
            echo "TODO: Install dependencies in the the backend API  "
       # TODO: Lint the frontend
       - run:
           name: Front-End Lint
-          command: |
+          command: npm run frontend:lint|
             echo "TODO: Lint the frontend"
       # TODO: Build the frontend app
       - run:
           name: Front-End Build
-          command: |
+          command: npm run frontend:build 
             echo "TODO: Build the frontend app"
       # TODO: Build the backend API      
       - run:
           name: API Build
-          command: |
+          command: npm run api:build
             echo "TODO: Build the backend API"
   # deploy step will run only after manual approval
   deploy:
@@ -51,7 +51,7 @@ jobs:
       # more setup needed for aws, node, elastic beanstalk
     steps:
       - node/install:
-          node-version: '14.15' 
+          node-version: '16.17' 
       - eb/setup
       - aws-cli/setup
       - checkout
