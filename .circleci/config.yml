@@ -19,10 +19,7 @@ jobs:
       - run:
           name: Install Front-End Dependencies
           command: npm run frontend:install
-            echo "NODE --version" 
-            echo $(node --version)
-            echo "NPM --version" 
-            echo $(npm --version)
+            
             
       # TODO: Install dependencies in the the backend API          
       - run:
