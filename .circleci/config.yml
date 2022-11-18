@@ -48,14 +48,14 @@ jobs:
       - aws-cli/setup
       - checkout
 
+      
       - run:
           name: Deploy Backend
-          command: 
-              npm run api:deploy
+          command: npm run api:deploy
                    
-      -run:
-        name: Deploy FrontEnd
-        command: npm run frontend:deploy
+      - run:
+          name: Deploy FrontEnd
+          command: npm run frontend:deploy
       
 
             
