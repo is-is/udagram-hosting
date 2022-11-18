@@ -50,7 +50,9 @@ jobs:
 
       - run:
           name: Deploy Backend
-          command: npm run api:deploy
+          command:
+                eb init  udagram  --platform node.js --region us-east-2
+                npm run api:deploy
                    
       -run:
         name: Deploy FrontEnd
