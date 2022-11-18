@@ -47,14 +47,15 @@ jobs:
       - eb/setup
       - aws-cli/setup
       - checkout
-       run:
+
+      - run:
           name: Deploy Backend
           command: npm run api:deploy
                    
       -run:
         name: Deploy FrontEnd
         command: npm run frontend:deploy
-      -
+      
 
             
 workflows:
